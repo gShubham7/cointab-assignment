@@ -20,7 +20,7 @@ const Home = () => {
     }
     try {
       setRunning(true);
-      const { data } = await axios.post("http://localhost:8080/user");
+      const { data } = await axios.post("https://cointab-backend-cznp.onrender.com/user");
       if (data.message === "Success") {
         setRunning(false);
         setUsers(data.users);
@@ -42,7 +42,7 @@ const Home = () => {
     }
     try {
       setRunning(true);
-      const { data } = await axios.delete("http://localhost:8080/user");
+      const { data } = await axios.delete("https://cointab-backend-cznp.onrender.com/user");
       if (data.message === "Success") {
         setRunning(false);
         setUsers([]);

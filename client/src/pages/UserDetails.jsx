@@ -27,7 +27,7 @@ const UserDetails = () => {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/user?limit=10&page=${page}`
+        `https://cointab-backend-cznp.onrender.com/user?limit=10&page=${page}`
       );
       setUsers(data.users);
       setTotalPages(data.totalPages);
